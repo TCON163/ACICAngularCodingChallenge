@@ -15,12 +15,14 @@
 
 <ul class="linesOfBusiness">
   <li *ngFor="let lineOfBusiness of linesOfBusiness">
+
     <a routerLink="/detail/{{lineOfBusiness.id}}">
-      
-      <span class="badge">{{lineOfBusiness.id}}</span> {{lineOfBusiness.name}} - {{lineOfBusiness.description}}
+
+      <span class="badge">{{lineOfBusiness.id}}</span> {{lineOfBusiness.name}} - {{lineOfBusiness.description}} - Quotes: {{getNumberOfQuotesPerLOB(lineOfBusiness.id)}} quotes
     </a>
     <button class="delete" title="delete lineOfBusiness"
       (click)="delete(lineOfBusiness)">x</button>
-    
+      <div></div>
+
   </li>
 </ul>

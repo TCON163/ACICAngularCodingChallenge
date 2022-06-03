@@ -3,5 +3,13 @@
   <a routerLink="/dashboard">Search</a>
   <a routerLink="/linesOfBusiness">View All Lines Of Business</a>
 </nav>
+<div>
+  <h3>Top Lines of Business</h3>
+  <ul>
+    <li *ngFor="let top of topLOB">
+      <p>{{top.name}} - {{top.numOfQuotes}} quotes</p>
+    </li>
+  </ul>
+</div>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
